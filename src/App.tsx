@@ -1,12 +1,13 @@
-import { Header } from './Components/MontesWork/Header';
+import { Routes,Route } from 'react-router-dom';
+import { PaginaPrincipal } from './Components/Layouts/PaginaPrincipal/PaginaPrincipal';
 
 
 function App() {
 
   return (
-      <div>
-        <Header/>
-      </div>
+      <Routes>
+        <Route path='/' Component={PaginaPrincipal}/>
+      </Routes>
   )
 }
 
