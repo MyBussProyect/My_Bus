@@ -1,10 +1,14 @@
 import { NavLink } from 'react-router-dom';
 interface Props {
     content: string,
-    path: string
+    path: string,
+    className?: string
 }
-export const NavButton = ({ content, path }: Props) => {
+export const NavButton = ({ content, path, className }: Props) => {
     return (
-        <li className='list-none w-40 text-center text-sm text-white bg-primary rounded-2xl py-2 hover:bg-hover'><NavLink to={path}>{content}</NavLink></li>
+        <li
+            className={className}>
+            <NavLink to={path}>{content}</NavLink>
+        </li>
     )
 }   

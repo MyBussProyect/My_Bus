@@ -9,9 +9,10 @@ export default {
         backgroundColor:{
           'primary' : '#fd3932',
           'hover' : '#555455'
+        },
+        fontFamily: {
+          'dancing-script': ['Dancing Script', 'cursive'],
         }
-
-
     },
   },
   plugins: [],

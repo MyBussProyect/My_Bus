@@ -2,9 +2,9 @@ import { Header } from '../../MontesWork/Header';
 import { Main } from '../../MontesWork/Main';
 export const PaginaPrincipal = () => {
   return (
-    <div>
+    <div className='h-screen flex flex-col'>
         <Header/>
-        <Main></Main>
+        <Main/>
     </div>
   )
 }

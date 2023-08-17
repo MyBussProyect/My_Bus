@@ -3,7 +3,6 @@ import { PaginaPrincipal } from './Components/Layouts/PaginaPrincipal/PaginaPrin
 
 
 function App() {
-
   return (
       <Routes>
         <Route path='/' Component={PaginaPrincipal}/>
