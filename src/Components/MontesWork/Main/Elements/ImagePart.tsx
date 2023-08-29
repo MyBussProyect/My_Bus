@@ -18,10 +18,10 @@ export const ImagePart = () => {
 
   useEffect(() => {
     if (position === 0) elements[position]?.scrollIntoView({ behavior: "instant" });
-    else elements[position]?.scrollIntoView({ behavior: "smooth" });
+    else elements[position]?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
   }, [position]);
   return (
-    <section className=" relative overflow-hidden w-2/4 h-full">
+    <section className="transition-all duration-300 imagePart relative opacity-[1] block  w-2/4 h-full">
       <section className="absolute w-full h-full z-10 ">
         <div className="w-full h-full flex items-center justify-center bg-black/80">
           <section className='text-white flex flex-col gap-8 items-center justify-between'>
@@ -30,12 +30,12 @@ export const ImagePart = () => {
           </section>
         </div>
       </section>
-      <div className="relative overflow-x-scroll overflow-y-hidden flex -z-10 h-full items-center justify-between">
-        <img src={Images.aside1} className="element h-full object-cover object-center" />
-        <img src={Images.aside2} className="element h-full object-cover object-center" />
-        <img src={Images.aside3} className="element h-full object-cover object-center" />
-        <img src={Images.aside4} className="element h-full object-cover object-center" />
-        <img src={Images.aside1} className="element h-full object-cover object-center" />
+      <div className="relative overflow-x-scroll flex-grow flex -z-10 h-full items-center justify-between">
+        <img src={Images.aside1} className="element h-full object-cover object-center overflow-y-clip" />
+        <img src={Images.aside6} className="element h-full object-cover object-center overflow-y-clip" />
+        <img src={Images.aside3} className="element h-full object-cover object-center overflow-y-clip" />
+        <img src={Images.aside4} className="element h-full object-cover object-center overflow-y-clip" />
+        <img src={Images.aside1} className="element h-full object-cover object-center overflow-y-clip" />
       </div>
     </section>
   )

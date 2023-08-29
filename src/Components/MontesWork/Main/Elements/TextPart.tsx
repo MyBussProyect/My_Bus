@@ -5,9 +5,9 @@ import { NavButton } from '../../Navbar/NavButton';
 
 const stylesNavItemsTextPart = "list-none w-[200px] font-[600] hover:scale-[120%]  font-lato cursor-pointer text-center text-ms text-white bg-teal-green rounded-[7px] py-3 hover:bg-deep-blue transition-all  duration-300"
 
-const iconClassName = "block iconFromBar h-[70px] rounded-ms bg-white hover:scale-[120%] transition-all  duration-300"
-const messageClass = "messageTop my-9 transition-all duration-300 text-[20px] text-center  font-roboto opacity-[0]"
-const secondMessageClass = "absolute top-0 my-5 transition-all duration-300 text-[40px] text-center font-roboto opacity-[1]"
+const iconClassName = "bg-[none] p-2 hover:drop-shadow-xl block iconFromBar h-[80px] rounded-ms bg-white hover:scale-[120%] transition-all  duration-300"
+const messageClass = "messageTop my-7 transition-all duration-300 text-[20px] text-center  font-roboto opacity-[0]"
+const secondMessageClass = "absolute top-0 my-5 transition-all duration-300 text-[30px] text-center font-roboto opacity-[1]"
 export const TextPart = () => {
   const [Message, setMessage] = useState("servicios")
   const [MC, setMC] = useState(messageClass)
@@ -51,9 +51,9 @@ export const TextPart = () => {
             onMouseLeave={() => handleMessageOff()} />
 
           <Icons
-            src={IconsSource.whatsapp}
+            src={IconsSource.descargar}
             className={iconClassName}
-            onMouseOver={() => handleMessageOn(Messages.contacto)}
+            onMouseOver={() => handleMessageOn(Messages.aplicacion)}
             onMouseLeave={() => handleMessageOff()} />
         </div>
       </section>

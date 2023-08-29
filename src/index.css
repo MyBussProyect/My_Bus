@@ -11,3 +11,17 @@
     width: 0;
     height: 0;
 }
+.regCont, .logCont {
+        transition: width 0.5s ease; /* Propiedad, duración, función de aceleración */
+}
+.ulContainer{
+    transition: justify-content 0.5s ease;
+}
+
+.comboBox {
+    border-radius: 10px; /* Aplica bordes redondeados al select */
+    padding: 5px; /* Añade espacio interno para que los bordes redondeados sean visibles */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    outline: none;
+}
