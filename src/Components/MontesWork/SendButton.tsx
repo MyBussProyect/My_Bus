@@ -1,10 +1,9 @@
 
 interface Props {
         content: string,
-        event: () => void,
+        event?: () => void,
         className?: string
 }
-
 
 export const SendButton = ( { content, event, className }: Props) => {
   return (

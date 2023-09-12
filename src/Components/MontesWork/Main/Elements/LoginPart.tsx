@@ -1,9 +1,11 @@
-import React from 'react'
 import { FormCard } from '../../FormCard'
 import { Input } from '../../Input';
 import { EventButton } from '../../EventButton';
 import { Icons } from '../../Icons';
 import { IconsSource } from '../../../../Consts/Constants';
+import { useRef } from 'react';
+import axios from 'axios';
+
 const styles = {
   input: "w-full py-2 rounded-md text-[15px] font-roboto text-black border border-solid px-4 border-black ",
   label: "text-[15px] font-roboto text-black",
@@ -12,16 +14,40 @@ const styles = {
   allInput: "flex flex-col justify-between  w-full"
 }
 
+interface Register {
+  Documento: string | null,
+  contraseña: string | null
+}
+
+
+const AuthAnUser = async ({ Documento, contraseña }: Register) => {
+  let token:string = "";
+   await axios.post("http://mybuss.somee.com/Auth/User", {
+    Documento: Documento,
+    contraseña: contraseña
+  }).then(res => token =res.data.token)
+  return token
+}
+
 export const LoginPart = () => {
+  const handleRegister = async () => {
+    alert(await AuthAnUser({
+      Documento: Documento.current?.value,
+      contraseña: Contraseña.current?.value
+    })
+    )
+  }
+  const Documento = useRef(null)
+  const Contraseña = useRef(null)
   return (
     <aside className="transition-all  duration-300 loginPart absolute top-0 right-0 w-2/4 h-full py-12 px-20 hidden items-center justify-center opacity-[0]">
       <FormCard className={styles.card}>
         <h2 className='text-[35px] h-[15%]  font-montserrat font-bold text-black'>Iniciar Sesión</h2>
         <form className='flex flex-col overflow-y-scroll justify-around h-[40%] w-[100%]'>
-          <Input label='Email' type='email' labelStyle={styles.label} inputStyle={styles.input} className={styles.allInput} />
-          <Input label='Contraseña' type='password' labelStyle={styles.label} inputStyle={styles.input} className={styles.allInput} />
+          <Input inputRef={Documento} label='Documento' type='text' labelStyle={styles.label} inputStyle={styles.input + " emailInput"} className={styles.allInput} />
+          <Input inputRef={Contraseña} label='Contraseña' type='password' labelStyle={styles.label} inputStyle={styles.input + " passwordInput"} className={styles.allInput} />
         </form>
-        <EventButton content='Ingresar' event={() => { }} className={styles.button} />
+        <EventButton content='Ingresar' event={handleRegister} className={styles.button} />
         <h2 className=' h-[5%] text-lg font-bold '>or</h2>
         <section className='flex justify-evenly w-full h-[10%]'>
           <Icons src={IconsSource.facebook} className='h-full' />

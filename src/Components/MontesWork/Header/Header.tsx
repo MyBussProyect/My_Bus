@@ -4,8 +4,8 @@ import { Navbar } from '../Navbar/Navbar';
 import { EventButton } from '../EventButton';
 import { useEffect, useState } from 'react';
 import { findElement, toDisplay, replaceClass, toDisplayNone, toInvisible, toVisible, } from '../../../Consts/Functions';
+import { Styles } from '../../../Consts/Styles.';
 
-const stylesNavItemsHeader = "opacity-[1] block list-none w-[100%] font-[600] hover:scale-[110%]  font-lato cursor-pointer text-center text-sm transition-all text-white bg-teal-green rounded-[7px] py-2 hover:bg-deep-blue ease-in-out  duration-300"
 export const Header = () => {
   const ulContainer = findElement(".ulContainer")
   const regCont = findElement(".regCont")
@@ -104,10 +104,10 @@ export const Header = () => {
       <img src={Images.logo} alt="" className='h-[70px] py-2' />
       <Navbar>
         <section className='w-[40%] logCont'>
-          <EventButton content={firstButtonText} event={() => setisLogin(!isLogin)} className={stylesNavItemsHeader + " logButton"} />
+          <EventButton content={firstButtonText} event={() => setisLogin(!isLogin)} className={Styles.stylesNavItemsHeader + " logButton"} />
         </section>
         <section className='w-[40%] regCont block'>
-          <EventButton content='REGISTRATE' event={() => setisRegister(!isRegister)} className={stylesNavItemsHeader + " regButton"} />
+          <EventButton content='REGISTRATE' event={() => setisRegister(!isRegister)} className={Styles.stylesNavItemsHeader + " regButton"} />
         </section>
       </Navbar>
     </header>
