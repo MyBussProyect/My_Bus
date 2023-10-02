@@ -1,5 +1,3 @@
-import React from 'react'
-
 interface Props {
   className?: string,
   src: string,
@@ -7,7 +5,7 @@ interface Props {
   onMouseLeave?: () => void
 }
 
-export const Icons: React.FC<Props> = ({ className, src, onMouseOver, onMouseLeave }) => {
+export const Icons = ({ className, src, onMouseOver, onMouseLeave }:Props) => {
   return (
       <a href="#" className='' onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
         <img src={src} alt={src} className={className} />
