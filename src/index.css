@@ -11,17 +11,57 @@
     width: 0;
     height: 0;
 }
-.regCont, .logCont {
-        transition: width 0.5s ease; /* Propiedad, duración, función de aceleración */
+*{
+    font-family: Google Sans;
 }
-.ulContainer{
-    transition: justify-content 0.5s ease;
-}
-
 .comboBox {
-    border-radius: 10px; /* Aplica bordes redondeados al select */
-    padding: 5px; /* Añade espacio interno para que los bordes redondeados sean visibles */
+    border-radius: 10px; 
+    padding: 5px; 
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     outline: none;
+}
+.charge-bar {
+    width: 40px; 
+    height: 40px; 
+    border: 4px solid #ffffff; 
+    border-top: 4px solid #3498db; 
+    border-radius: 50%; 
+    animation: spin 1s linear infinite; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+
+
+.borShadow::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: linear-gradient(to Right, black, transparent);
+    width: 40px;    
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+    align-self: center;
+    height: 90%;
+    opacity: .7;
+}
+
+.borShadow::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: linear-gradient(to Left, black, transparent);
+    width: 40px;
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+    align-self: center;
+    height: 90%;
+    opacity: .7;
 }

@@ -1,16 +1,19 @@
-import React from 'react'
-
 interface Props {
-  className?: string,
-  src: string,
-  onMouseOver?: () => void,
-  onMouseLeave?: () => void
+  className?: string;
+  src: string;
+  onMouseOver?: () => void;
+  onMouseLeave?: () => void;
 }
 
-export const Icons: React.FC<Props> = ({ className, src, onMouseOver, onMouseLeave }) => {
+export default ({ className, src, onMouseOver, onMouseLeave }: Props) => {
   return (
-      <a href="#" className='' onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
-        <img src={src} alt={src} className={className} />
-      </a>
-  )
-}
+    <a
+      href="#"
+      className=""
+      onMouseOver={onMouseOver}
+      onMouseLeave={onMouseLeave}
+    >
+      <img src={src} alt={src} className={className} />
+    </a>
+  );
+};

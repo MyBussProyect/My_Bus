@@ -18,6 +18,7 @@ export default {
         'olive-green': '#556B2F', // Verde Oliva
         'soft-green': '#32CD32', // Verde Lima Suave
         'teal-green': '#008080', // Verde Azulado
+        'modern-gray': "#333333" // Gris Oscuro
       },
       borderColor: {
         'intense-red': '#fd2121', // Rojo Intenso

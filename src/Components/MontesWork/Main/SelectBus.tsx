@@ -1,6 +1,6 @@
 import { FormEvent, MutableRefObject, useEffect, useState } from 'react';
-import { BusGetter, DriverLogin } from '../../../../DataProvider/Constants';
-import { AddDriver } from '../../../../DataProvider/Conductor';
+import { BusGetter, DriverLogin } from '../../../Consts/Constants';
+import { AddDriver } from './../DataProvider/Conductor';
 
 type Props = {
     bussList: Array<BusGetter>,
