@@ -1,5 +1,3 @@
-export const BASE_URL = "http://mybuss.somee.com/"
-
 export type UserLogin = {
     Documento?: string
     foto?: string

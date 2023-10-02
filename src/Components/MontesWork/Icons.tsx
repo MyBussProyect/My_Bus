@@ -1,14 +1,19 @@
 interface Props {
-  className?: string,
-  src: string,
-  onMouseOver?: () => void,
-  onMouseLeave?: () => void
+  className?: string;
+  src: string;
+  onMouseOver?: () => void;
+  onMouseLeave?: () => void;
 }
 
-export const Icons = ({ className, src, onMouseOver, onMouseLeave }:Props) => {
+export default function Icons ({ className, src, onMouseOver, onMouseLeave }: Props) {
   return (
-      <a href="#" className='' onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
-        <img src={src} alt={src} className={className} />
-      </a>
-  )
-}
+    <a
+      href="#"
+      className=""
+      onMouseOver={onMouseOver}
+      onMouseLeave={onMouseLeave}
+    >
+      <img src={src} alt={src} className={className} />
+    </a>
+  );
+};
