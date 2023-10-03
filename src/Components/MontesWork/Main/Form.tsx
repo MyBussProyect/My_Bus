@@ -48,7 +48,7 @@ export const Form = () => {
       EndPoint: IsDriver ? 'Conductor/Crear' : 'User/Add',
       Body: user,
       method: 'POST',
-      CallBack: (_, err) => {
+      CallBack: (data, err) => {
         if (err) {
           setToastOptions({
             Status: "DANGER",
@@ -64,7 +64,7 @@ export const Form = () => {
         } else {
           setToastOptions({
             Status: "SUCCESS",
-            Message: "Usuario registrado correctamente",
+            Message: data.message,
             Duration: 1200
           } as ToastOptions)
           setThereIsToast(true);

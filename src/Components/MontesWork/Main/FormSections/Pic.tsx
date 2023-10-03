@@ -5,11 +5,9 @@ import SignContext from '../../../../Contexts/SignContext';
 import UseUpload from '../../../../Hooks/useUpload';
 
 export const Pic = () => {
-  const { isSent } = useContext(ValidateForm);
-  const { IsDriver, actualUser, setActualUser } = useContext(SignContext);
+  const { IsDriver } = useContext(SignContext);
   const [thereIsPic, setThereIsPic] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [src, setSrc] = useState('');
   const handleChange = (event: any) => {
     setThereIsPic(true);
     setIsLoading(true);
@@ -20,18 +18,22 @@ export const Pic = () => {
         setIsLoading(false);
         setTimeout(() => {
           (imgRef.current! as HTMLImageElement).src = data;
-          setSrc(data);
         }, 200);
       },
     );
   };
 
-
   const imgRef = useRef(null);
 
   return (
-    <div id='Pic' className="h-full px-36 min-w-full overflow-hidden flex flex-col justify-between ">
-      <button type="button" className="w-full border border-white rounded-xl  h-full relative object-cover">
+    <div
+      id="Pic"
+      className="h-full px-36 min-w-full overflow-hidden flex flex-col justify-between "
+    >
+      <button
+        type="button"
+        className="w-full border border-white rounded-xl  h-full relative object-cover"
+      >
         <input
           type="file"
           name="file"
@@ -47,7 +49,7 @@ export const Pic = () => {
               <ChargeBar />
             ) : (
               <img
-                id='ImageField'
+                id="ImageField"
                 ref={imgRef}
                 alt="img"
                 className="h-[22rem] w-[100%] object-cover object-center"
