@@ -15,7 +15,7 @@ export const LoginPart = () => {
   const handleRegister = (event: FormEvent<any>): FormEventHandler => {
     event.preventDefault();
     useFetch({
-      EndPoint: 'Auth/User',
+      EndPoint: 'Autorizar/Usuario',
       CallBack: (data, err) => {
         if (err) {
           console.log(err.response.data);
