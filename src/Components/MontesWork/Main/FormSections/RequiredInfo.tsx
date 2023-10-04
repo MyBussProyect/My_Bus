@@ -1,5 +1,5 @@
 import { Input } from '../../Input';
-
+import React from "react"
 const FullInputStyle = 'flex flex-col w-full gap-2';
 const InputStyle = 'text-black  px-5 py-1 rounded-2xl';
 const LabelStyle = 'self-start font-semibold';

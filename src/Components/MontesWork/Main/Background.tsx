@@ -1,5 +1,5 @@
 import { Images } from "./../../../Consts/Constants"
-
+import React from "react"
 export const Background = () => {
     return (
         <div className="relative overflow-x-scroll flex-grow flex -z-10 h-full brightness-[40%]">

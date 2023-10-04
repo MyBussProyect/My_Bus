@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React,{ useContext } from 'react';
 import SignContext from '../../../../Contexts/SignContext';
 export const AccountType = () => {
   const { IsDriver, setIsDriver } = useContext(SignContext);

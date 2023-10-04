@@ -1,8 +1,9 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import React,{ useContext, useEffect, useRef, useState } from 'react';
 import { ChargeBar } from './ChargeBar';
 import ValidateForm from '../../../../Contexts/FormOptions';
 import SignContext from '../../../../Contexts/SignContext';
 import UseUpload from '../../../../Hooks/useUpload';
+
 
 export const Pic = () => {
   const { IsDriver } = useContext(SignContext);

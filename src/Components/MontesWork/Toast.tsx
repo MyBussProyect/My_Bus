@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React,{ useState } from 'react';
 
 const Success = (Props: { message: string }) => (
   <div
@@ -47,7 +47,7 @@ const Success = (Props: { message: string }) => (
 const Danger = (Props: { message: string }) => (
   <div
     id="toast-danger"
-    className="flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+    className="flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-slate-200"
     role="alert"
   >
     <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-red-500 bg-red-100 rounded-lg dark:bg-red-800 dark:text-red-200">
@@ -62,7 +62,7 @@ const Danger = (Props: { message: string }) => (
       </svg>
       <span className="sr-only">Error icon</span>
     </div>
-    <div className="ml-3 text-sm font-normal">{Props.message}</div>
+    <div className="ml-3 text-sm font-normal text-black">{Props.message}</div>
 
   </div>
 );

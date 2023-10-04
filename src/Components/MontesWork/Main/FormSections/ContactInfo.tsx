@@ -1,4 +1,4 @@
-
+import React from "react"
 import { Input } from '../../Input';
 
 const FullInputStyle = 'flex flex-col w-full gap-2';

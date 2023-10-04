@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import React,{ useContext, useEffect, useRef, useState } from 'react';
 import { changeBorderAt } from '../../../Consts/StyleEvents';
 import { SectionTitle } from '../../../Consts/FormItems';
 import { AccountType } from './FormSections/AccountType';
@@ -52,7 +52,7 @@ export const Form = () => {
         if (err) {
           setToastOptions({
             Status: "DANGER",
-            Message: err.response.data.message,
+            Message: err.response.data.message ?? "Hubo un error al registrarse",
             Duration: 1200
           } as ToastOptions)
           setThereIsToast(true);
