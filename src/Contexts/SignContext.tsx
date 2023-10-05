@@ -12,7 +12,7 @@ type Context = {
 };
 export const SignProvider = (props: { children: ReactNode }) => {
   const [actualUser, setActualUser] = useState({});
-  const [IsDriver, setIsDriver] = useState(true);
+  const [IsDriver, setIsDriver] = useState(false);
   return (
     <SignContext.Provider
       value={{

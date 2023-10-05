@@ -7,13 +7,13 @@ const iconClassName =
 const IconList = () => {
   return (
     <div className="flex w-full justify-between">
-      <Icons src={IconsSource.ruta} className={iconClassName} />
+      <Icons src={IconsSource.RUTA} className={iconClassName} />
 
-      <Icons src={IconsSource.contacto} className={iconClassName} />
+      <Icons src={IconsSource.CONTACTO} className={iconClassName} />
 
-      <Icons src={IconsSource.redes} className={iconClassName} />
+      <Icons src={IconsSource.REDES} className={iconClassName} />
 
-      <Icons src={IconsSource.descargar} className={iconClassName} />
+      <Icons src={IconsSource.DESCARGAR} className={iconClassName} />
     </div>
   );
 };

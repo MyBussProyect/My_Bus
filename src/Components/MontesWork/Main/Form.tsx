@@ -73,7 +73,7 @@ export const Form = () => {
             Duration: 1200,
           } as ToastOptions);
           console.log(data);
-          
+
           setThereIsToast(true);
           setTimeout(() => {
             setThereIsToast(false);
@@ -83,6 +83,11 @@ export const Form = () => {
       },
     });
   };
+  const handleTabClick = (ev)  => {
+    if (ev.key === "Tab") ev.preventDefault();
+    return null;
+
+  }
 
   const handleGoClick = () =>
     (!IsDriver && ActualSection === 4) || ActualSection === 7
@@ -95,6 +100,7 @@ export const Form = () => {
   return (
     <article className="absolute items-center flex-col justify-center h-full w-full flex text-white register transition-opacity duration-300">
       <form
+        onKeyDown={handleTabClick}
         ref={formRef}
         className="border borShadow w-screen flex flex-col items-center justify-around  backdrop-brightness-75 backdrop-blur-lg m-auto text-center text-ms relative text-white rounded-3xl h-[50rem] max-w-[50rem] transition-all duration-300"
       >
@@ -119,7 +125,7 @@ export const Form = () => {
             type="button"
             className="border border-[#ffffff33] w-2/6 rounded-2xl text-xl py-2 hover:invert transition-all bg-black"
           >
-            Continuar
+            {((!IsDriver && ActualSection === 4) ||ActualSection === 7)?"Registrate":"Continuar"}
           </button>
         </section>
       </form>

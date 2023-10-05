@@ -65,8 +65,8 @@ export const LoginPart = () => {
         </button>
         <h2 className=" h-[5%] text-lg">or</h2>
         <section className="flex justify-evenly w-full h-[7%]">
-          <Icons src={IconsSource.facebook} className="h-full" />
-          <Icons src={IconsSource.google} className=" h-full" />
+          <Icons src={IconsSource.FACEBOOK} className="h-full" />
+          <Icons src={IconsSource.GOOGLE} className=" h-full" />
         </section>
       </form>
     </aside>
